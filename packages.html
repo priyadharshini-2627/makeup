@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5f5;
+            color: #3b2028;
+        }
+          header {
+            background: white;
+            min-height: 90px;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 12px #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            color: #b52d59;
+            font-size: 38px;
+            font-family: cursive;
+            line-height: 1;
+        }
+
+
+        .logo small {
+            display: block;
+            font-family: Arial;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #b52d59;
+        }
+
+
+        .book-btn {
+            text-decoration: none;
+            color: white;
+            background: #b52d59;
+
+            padding: 13px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .book-btn:hover {
+            background: #8f2045;
+        }
+        /* PACKAGES PAGE */
+
+.packages-page {
+    background: #fff7fa;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.packages-page h2 {
+    color: #a91f4d;
+    font-size: 38px;
+}
+.packages-page h1{
+    color: #8f2045;
+}
+
+
+.package-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+.package-card {
+    
+    background: white;
+    padding: 15px ;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px #ddd;
+    transition: 0.4s;
+    height: 70%;
+     min-width: 300px;
+    scroll-snap-align: center;
+    margin: 15px;
+    flex-shrink: 0;
+}
+
+.package-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 35px #ccc;
+
+}
+
+
+.package-card h3 {
+    color: #a91f4d;
+    font-size: 23px;
+}
+
+
+.package-price {
+    color: #777;
+    font-weight: bold;
+}
+
+
+.package-card ul {
+    list-style: none;
+    padding: 10px;
+    line-height: 2;
+    text-align: left;
+}
+
+
+.package-button {
+    display: inline-block;
+    background: #a91f4d;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+
+.package-button:hover {
+    background: #64132f;
+}
+
+
+.featured {
+    border: 3px solid #d49a6a;
+    transform: scale(1.05);
+}
+
+
+.package-bottom {
+    background: #fff0f5;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+.package-bottom h2 {
+    color: #a91f4d;
+}
+.stats {
+            background: #a91f4d;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stats h2 {
+            font-size: 28px;
+        }
+
+        .stats p {
+            margin-top: 5px;
+        }
+.package-slider {
+    width: 100%;
+    overflow-x:auto ;
+    scroll-behavior: smooth;
+   cursor: grab;
+   scrollbar-width: none;
+}
+
+.package-slides::-webkit-scrollbar
+{
+   
+     display: none;
+}   
+.package-slider:active{
+    cursor:grabbing;
+}
+.package-slides {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+
+    </style>
+</head>
+<script>
+const slider = document.getElementById("packageSlider");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+    isDown = false;
+});
+
+slider.addEventListener("mouseup", () => {
+    isDown = false;
+});
+
+slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+
+    e.preventDefault();
+
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+
+    slider.scrollLeft = scrollLeft - walk;
+});
+</script>
+<body>
+     <header>
+
+
+    <div class="logo">
+
+        <img src="front\ChatGPT Image Sep 25, 2026, 12_23_36 PM.png">
+    </div>
+
+
+    <nav>
+
+        <a href="home.html"class="book-btn">HOME</a>
+
+        <a href="about.html"class="book-btn">ABOUT</a>
+
+        <a href="services.html"class="book-btn">SERVICES</a>
+
+       
+        <a href="packages.html"class="book-btn">PACKAGES</a>
+
+        <a href="gallery.html"class="book-btn">GALLERY</a>
+
+        <a href="booking.html"class="book-btn">BOOKING</a>
+
+        <a href="contact.html"class="book-btn">CONTACT</a>
+
+    </nav>
+
+
+    <a href="booking.html"
+       class="book-btn">
+
+        📅 Book Appointment
+
+    </a>
+
+
+</header>
+
+<section class="packages-page">
+    <h1>----------------❁-----------------</h1>
+
+    <h2>Our Beauty Packages ✨</h2>
+
+    <p class="package-intro">
+        Choose a package that brings together the beauty services
+        you need for your special occasion.
+    </p>
+    <div class="package-slider" id="packageSliders">
+        
+        <div class="package-slides">
+    
+        
+
+        <!-- Package 1 -->
+         <div class="package-card featured">
+
+    <h3>🌹 Party Glam</h3>
+
+    <p class="package-price">Party Combo<h1>₹4,999</h1>
+</p>
+    
+    <ul>
+        <li>💄 Party Makeup</li>
+        <li>👱 Hairstyling</li>
+        <li>👗 Saree Draping</li>
+        <li>✨ Eye Makeup</li>
+        <li>💎 Finishing Touch</li>
+    </ul>
+
+    <a href="booking.html"class="package-button">Book Now</a>
+</div>
+ <!-- PACKAGE 2 -->
+<div class="package-card featured">
+
+    <h3>🌷 Bridesmaid Beauty</h3>
+
+    <p class="package-price">Bridesmaid Combo<h1>₹5,999</h1>
+</p>
+    
+    <ul>
+        <li>💄 Party Makeup</li>
+        <li>👱 Hairstyling</li>
+        <li>👗 Saree Draping</li>
+        <li>✨ Eye Makeup</li>
+        <li>💎 Finishing Touch</li>
+    </ul>
+
+    <a href="booking.html"class="package-button">Book Now</a>
+</div>
+
+<!-- PACKAGE 3 -->
+<div class="package-card featured">
+
+    <h3>🌿 Mehendi Bride</h3>
+
+    <p class="package-price">Mehendi Combo<h1>₹6,999</h1>
+</p>
+    
+    <ul>
+        <li>💄 Light Bridal Makeup</li>
+        <li>👱 Hairstyling</li>
+        <li>👗 Saree Draping</li>
+        <li>🌿 Both Hand Mehendi</li>
+        <li>✨ Finishing Touch</li>
+    </ul>
+
+    <a href="booking.html"class="package-button">Book Now</a>
+</div>
+   <!-- PACKAGE 4 -->
+<div class="package-card featured">
+
+    <h3> Engagement Glow</h3>
+
+    <p class="package-price">Engagement Combo<h1>₹7,999</h1></p>
+    
+
+    <ul>
+        <li>💄 Engagement Makeup</li>
+        <li>👱 Hairstyling</li>
+        <li>👗 Saree Draping</li>
+        <li>✨ Eye Makeup</li>
+        <li>💎 Finishing Touch</li>
+    </ul>
+
+    <a href="booking.html" class="package-button">Book Now</a>
+</div>
+
+    <!-- PACKAGE 5 -->
+        <div class="package-card featured">
+            <h3>The Blossom Bride</h3>
+
+            <p class="package-price"> Simple and Elegant<h1>₹8,999</h1></p>
+
+            <ul>
+                <li>💄 Bridal Makeup</li>
+                <li>💇 Hairstyling</li>
+                <li>👗 Saree Draping</li>
+                <li>✨ Bridal Finishing</li>
+            </ul>
+
+            <a href="booking.html" class="package-button">
+                Book Now
+            </a>
+
+        </div>
+        <!-- Package 6 -->
+         <div class="package-card featured">
+
+    <h3>✨ Reception Glam</h3>
+
+    <p class="package-price">Reception Combo<h1>₹9,999</h1></p>
+    
+
+    <ul>
+        <li>💄 Reception Makeup</li>
+        <li>👱 Glam Hairstyling</li>
+        <li>👗 Saree Draping</li>
+        <li>💎 Eye & Lip Makeup</li>
+        <li>✨ Finishing Touch</li>
+    </ul>
+
+    <a href="booking.html" class="package-button">Book Now</a>
+</div>
+
+
+
+        <!-- Package 7 -->
+        <div class="package-card featured">
+
+            <h3>The Classic Bride</h3>
+
+            <p class="package-price">Tradinational and Timeless<h1>₹12,999</h1></p>
+
+            <ul>
+                <li>💄HD Bridal Makeup</li>
+                <li>💇 Hairstyling</li>
+                <li>👗 Saree Draping</li>
+                <li>🌿 Hair accessories</li>
+                <li>💍Jewellery setting</li>
+                <li>🪞Basic touch-up<li>
+            </ul>
+
+            <a href="booking.html" class="package-button">
+                Book Now
+            </a>
+
+        </div>
+
+
+        
+
+        
+    
+
+<!-- PACKAGE 8 -->
+         <div class="package-card featured">
+
+            <h3>Wedding Bride</h3>
+
+            <p class="package-price">Wedding combo<h1>₹14,999</h1></p>
+
+            <ul>
+                <li>💄 Mugurtham Makeup</li>
+                <li>💇 Bridal Hairstyling</li>
+                <li>👗 Saree Draping</li>
+                <li>🔅 Both hand  simple mehandi</li>
+                <li>✨ Finishing Touch</li>
+                
+            </ul>
+
+            <a href="booking.html" class="package-button">
+                Book Now
+            </a>
+    </div>  
+      
+        <!-- Package 9 -->
+          <div class="package-card featured">
+   
+
+            <h3>The Glow Bride<h3>
+
+            <p class="package-price">Glowing&Glamorous<h1>₹17,999</h1></p>
+
+            <ul>
+                <li>💄 HD Bridal Makeup</li>
+                <li>💇 Advanced Bridal Hairstyling</li>
+                <li>👗 Saree Draping</li>
+                <li>✨ Hair extensions</li>
+                <li>💍 Jewellery setting</li>
+                <li>🤗 Bridal facial</li>
+                <li>✨ Final Touch-up</li>
+            </ul>
+
+            <a href="booking.html" class="package-button">
+                Book Now
+            </a>
+
+        </div>
+          <!-- Package 10-->
+        <div class="package-card featured">
+
+            <h3>The Royal Bride</h3>
+
+            <p class="package-price">Luxury Bridal Look<h1>₹22,999</h1></p>
+
+            <ul>
+                <li>💄 HD/Airbrush Bridal Makeup</li>
+                <li>💇 Premium bridal Hairstyling</li>
+                <li>👗 Saree Draping</li>
+                <li>✨ Hair extensions</li>
+                <li>💍 Jewellery setting</li>
+                <li>🤗 Bridal facial</li>
+                <li>✨ lashes & lenses</li>
+                <li>🔅 Both hand mehandi</li>
+                <li>✨ Finishing Touch</li>
+                <li>💄 Reception makeup + hairstyle</li>
+            </ul>
+
+            <a href="booking.html" class="package-button">
+                Book Now
+            </a>
+        </div>
+           
+    </div>
+    
+    </div>
+    <p class="swipe-text">⬅️swipe to explore packages➡️</p>
+
+</section>
+
+
+<section class="package-bottom">
+
+    <h2>Your Look, Your Choice 💕</h2>
+
+    <p>
+        Packages can be customised according to your occasion
+        and beauty requirements.
+    </p>
+
+    <a href="booking.html" class="button">
+        Enquire Now
+    </a>
+
+</section>
+<div class="stats">
+
+
+<footer>
+    <h3>Priya Makeup Artist</h3>
+    <p>Bridal Makeup • Hairstyling • Saree Styling</p>
+    <p>© 2026 Priya Makeup Artist</p>
+</footer>
+</div>
+</body>
+</html>

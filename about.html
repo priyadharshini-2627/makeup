@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff6f7;
+            color: #3b2028;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: white;
+            min-height: 90px;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 12px #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            color: #b52d59;
+            font-size: 38px;
+            font-family: cursive;
+            line-height: 1;
+        }
+
+
+        .logo small {
+            display: block;
+            font-family: Arial;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #b52d59;
+        }
+
+
+        .book-btn {
+            text-decoration: none;
+            color: white;
+            background: #b52d59;
+
+            padding: 13px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .book-btn:hover {
+            background: #8f2045;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .about-hero {
+
+            min-height: 150px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(255, 225, 232, 0.90),
+                    rgba(255, 240, 243, 0.90)
+                );
+
+            padding: 50px 20px;
+        }
+
+
+        .about-hero h1 {
+
+            font-family: Georgia, serif;
+
+            font-size: 55px;
+
+            color: #3b2028;
+
+     
+        }
+
+
+        .about-hero h1 span {
+            color: #b52d59;
+            font-family: cursive;
+        }
+
+
+        .about-hero p {
+            font-size: 18px;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about-section {
+
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 70px auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 60px;
+        }
+
+
+        .about-image {
+            width: 45%;
+            height: 750px;    
+            }
+
+
+        .about-image img {
+
+            width: 100%;
+            height: 700px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 12px 30px rgba(100, 30, 50, 0.20);
+        }
+
+
+        .about-content {
+            width: 55%;
+        }
+
+
+        .about-content h2 {
+
+            font-family: Georgia, serif;
+
+            font-size: 40px;
+
+            margin-bottom: 20px;
+
+            color: #3b2028;
+        }
+
+
+        .about-content h2 span {
+            color: #b52d59;
+        }
+
+
+        .about-content p {
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
+
+            color: #5d474d;
+        }
+
+
+        .quote {
+
+            border-left: 5px solid #b52d59;
+
+            padding: 15px 20px;
+
+            background: #fff0f3;
+
+            margin: 25px 0;
+
+            font-family: Georgia, serif;
+
+            font-size: 20px;
+
+            font-style: italic;
+
+            color: #7e2947;
+        }
+
+
+        /* ================= FEATURES ================= */
+
+        .features-section {
+
+            background: white;
+
+            padding: 70px 5%;
+
+            text-align: center;
+        }
+
+
+        .features-section h2 {
+
+            font-family: Georgia, serif;
+
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .features-section h2 span {
+            color: #b52d59;
+        }
+
+
+        .features-section > p {
+
+            color: #777;
+
+            margin-bottom: 40px;
+        }
+
+
+        .features {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .feature-card {
+
+            background: #fff7f8;
+
+            padding: 30px 20px;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+
+            border: 1px solid #f3d8df;
+        }
+
+
+        .feature-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 10px 25px rgba(150, 50, 80, 0.15);
+        }
+
+
+        .feature-icon {
+
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            background: #f8dce4;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+        }
+
+
+        .feature-card h3 {
+
+            color: #8f2045;
+
+            margin-bottom: 10px;
+        }
+
+
+        .feature-card p {
+
+            color: #666;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience {
+
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 70px auto;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff0f3,
+                    #f7dce3
+                );
+
+            padding: 55px 30px;
+
+            border-radius: 25px;
+        }
+
+
+        .experience h2 {
+
+            font-family: Georgia, serif;
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .experience p {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            line-height: 1.8;
+
+            color: #5c464c;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .about-button {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 14px 30px;
+
+            background: #b52d59;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .about-button:hover {
+            background: #8f2045;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #641735;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 45px 20px;
+        }
+
+
+        footer h2 {
+
+            font-family: cursive;
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        footer p {
+
+            margin: 8px;
+
+            color: #f5dce4;
+        }
+
+
+        .copyright {
+
+            margin-top: 25px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #8e4b63;
+
+            font-size: 13px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+
+            nav {
+                text-align: center;
+            }
+
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+
+            .about-section {
+
+                flex-direction: column;
+
+                gap: 35px;
+            }
+
+
+            .about-image,
+            .about-content {
+                height: 75%;
+                width: 100%;
+            }
+
+
+            .about-image img {
+                height: 450px;
+            }
+
+
+            .features {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .about-hero h1 {
+                font-size: 40px;
+            }
+
+
+            .about-content h2 {
+                font-size: 32px;
+            }
+
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+        }
+/* ================================
+   PREMIUM INSTAGRAM QR SECTION
+================================ */
+
+.instagram-section {
+    padding: 90px 8%;
+    background: linear-gradient(
+        135deg,
+        #fff7fa,
+        #fff0f5,
+        #fffaf2
+    );
+}
+
+.insta-card {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    background: rgba(255,255,255,0.9);
+    border: 1px solid #ead0a2;
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(169,31,77,0.12),
+        0 5px 20px rgba(191,150,70,0.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Gold decorative circle */
+
+.insta-card::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+    right: -100px;
+    top: -100px;
+    opacity: 0.25;
+}
+
+
+/* LEFT CONTENT */
+
+.insta-content {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #b38b2e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.insta-content h2 {
+    margin: 15px 0;
+    font-size: 38px;
+    color: #8f1942;
+    font-family: Georgia, serif;
+}
+
+.insta-content > p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* PROFILE */
+
+.insta-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.insta-logo {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #8f1942,
+        #d6336c,
+        #d4af37
+    );
+
+    color: white;
+    font-size: 27px;
+
+    box-shadow: 0 8px 20px rgba(169,31,77,0.2);
+}
+
+.insta-profile h3 {
+    margin: 0;
+    color: #333;
+}
+
+.insta-profile p {
+    margin: 5px 0 0;
+    color: #a91f4d;
+}
+
+
+/* BUTTON */
+
+.instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #a91f4d,
+        #c72d60
+    );
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    box-shadow: 0 10px 25px rgba(169,31,77,0.25);
+
+    transition: 0.3s;
+}
+
+.instagram-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(169,31,77,0.3);
+}
+
+
+/* QR AREA */
+
+.qr-area {
+    text-align: center;
+    min-width: 250px;
+}
+
+.qr-frame {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.12),
+        0 0 0 7px #fffaf0;
+}
+
+.qr-frame img {
+    display: block;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: contain;
+}
+
+
+/* QR TITLE */
+
+.qr-title {
+    padding: 8px;
+
+    color: #a91f4d;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.qr-title i {
+    margin-right: 5px;
+}
+
+
+/* GOLD DECORATION */
+
+.qr-decoration {
+    position: absolute;
+
+    bottom: -12px;
+    right: -12px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d4af37;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+}
+
+
+/* SCAN TEXT */
+
+.scan-text {
+    margin-top: 25px;
+
+    color: #777;
+
+    line-height: 1.6;
+}
+
+.scan-text strong {
+    color: #a91f4d;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .instagram-section {
+        padding: 60px 20px;
+    }
+
+    .insta-card {
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .insta-content h2 {
+        font-size: 30px;
+    }
+
+    .insta-profile {
+        justify-content: center;
+    }
+
+    .instagram-btn {
+        justify-content: center;
+    }
+
+}
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header>
+
+
+   <div class="logo">
+
+        <img src="front\ChatGPT Image Sep 25, 2026, 12_23_36 PM.png">
+    </div>
+
+
+    <nav>
+
+        <a href="home.html"class="book-btn">HOME</a>
+
+        <a href="about.html"class="book-btn">ABOUT</a>
+
+        <a href="services.html"class="book-btn">SERVICES</a>
+
+       
+        <a href="packages.html"class="book-btn">PACKAGES</a>
+
+        <a href="gallery.html"class="book-btn">GALLERY</a>
+
+        <a href="booking.html"class="book-btn">BOOKING</a>
+
+        <a href="contact.html"class="book-btn">CONTACT</a>
+
+    </nav>
+
+
+    <a href="booking.html"
+       class="book-btn">
+
+        📅 Book Appointment
+
+    </a>
+
+
+
+</header>
+
+
+
+<!-- ==================================================
+     ABOUT HERO
+================================================== -->
+
+<section class="about-hero">
+
+    <div>
+        <h1>
+            About <span>Priya</span>
+        </h1>
+
+        <p>
+            Creating elegant makeup looks that celebrate
+            your individuality, confidence and special moments.
+        </p>
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ABOUT CONTENT
+================================================== -->
+
+<section class="about-section">
+
+
+    <div class="about-image">
+
+        <!-- HTTPS ONLINE BRIDAL IMAGE -->
+
+        <img src="front\OIP (1).webp"
+        alt="Bridal Beauty Makeup">
+
+    </div>
+
+
+
+    <div class="about-content">
+
+
+        <h2>
+            Where Beauty Meets <span>Confidence</span>
+        </h2>
+
+
+        <p>
+            Welcome to Priya Makeup Artist, where every
+            makeup look is created with care, creativity
+            and attention to detail.
+        </p>
+
+
+        <p>
+            We believe makeup should enhance your natural
+            features while allowing your personality to
+            shine through. Whether it is your wedding,
+            engagement, reception or a special celebration,
+            our goal is to create a look that feels
+            comfortable and uniquely yours.
+        </p>
+
+
+        <p>
+            From flawless makeup and elegant hairstyles
+            to saree draping and pre-pleating, we offer
+            services designed to complete your overall look.
+        </p>
+
+
+        <div class="quote">
+
+            “Your special moments deserve a look
+            that feels beautifully yours.”
+
+        </div>
+
+
+        <a href="booking.html"
+           class="about-button">
+
+            Plan Your Look →
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     WHY CHOOSE US
+================================================== -->
+
+<section class="features-section">
+
+
+    <h2>
+        Our <span>Approach</span>
+    </h2>
+
+
+    <p>
+        Every appointment is planned around your
+        comfort, style and occasion.
+    </p>
+
+
+
+    <div class="features">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💄
+            </div>
+
+            <h3>
+                Personalized Looks
+            </h3>
+
+            <p>
+                Makeup styles are selected according
+                to your features, outfit and occasion.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ✨
+            </div>
+
+            <h3>
+                Quality Products
+            </h3>
+
+            <p>
+                Carefully selected makeup products
+                for a comfortable and beautiful finish.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🌸
+            </div>
+
+            <h3>
+                Attention to Detail
+            </h3>
+
+            <p>
+                Every detail from makeup to hairstyle
+                is thoughtfully completed.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🛡️
+            </div>
+
+            <h3>
+                Comfort & Hygiene
+            </h3>
+
+            <p>
+                A clean, comfortable and pleasant
+                makeup experience for every client.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+<section class="instagram-section">
+
+    <div class="insta-card">
+
+        <div class="insta-content">
+
+            <span class="small-title">LET'S CONNECT</span>
+
+            <h2>Follow My Beauty Journey ✨</h2>
+
+            <p>
+                Discover bridal transformations, elegant makeup looks,
+                hairstyles and behind-the-scenes moments on Instagram.
+            </p>
+
+            <div class="insta-profile">
+                <div class="insta-logo">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div>
+                    <h3>Priya Makeup Artist</h3>
+                    <p>@priyamakeupartist</p>
+                </div>
+            </div>
+
+            <a href="https://www.instagram.com/priya_makeupartist_mua26/"
+               target="_blank"
+               class="instagram-btn">
+                <i class="fa-brands fa-instagram"></i>
+                Follow on Instagram
+            </a>
+
+        </div>
+
+
+        <div class="qr-area">
+
+            <div class="qr-frame">
+
+                <div class="qr-title">
+                    <i class="fa-brands fa-instagram"></i>
+                    Scan Me
+                </div>
+
+                <img src="front\priya_makeupartist_mua26_qr.png"
+                     alt="Priya Makeup Artist Instagram QR Code">
+
+                <div class="qr-decoration">✦</div>
+
+            </div>
+
+            <p class="scan-text">
+                Scan to explore my<br>
+                <strong>Instagram Portfolio</strong> 💕
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     EXPERIENCE
+================================================== -->
+
+<section class="experience">
+
+
+    <h2>
+        Your Occasion. Your Style. Your Look.
+    </h2>
+
+
+    <p>
+
+        Every person has a unique style and every
+        occasion has its own story. We take the time
+        to understand your preferences and create
+        a look that complements your personality,
+        outfit and celebration.
+
+    </p>
+
+
+    <a href="booking.html"
+       class="about-button">
+
+        ✨ Book Your Glam Session
+
+    </a>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+
+    <h2>
+        Priya Makeup Artist
+    </h2>
+
+
+    <p>
+        Enhance Your Beauty ✨
+    </p>
+
+
+    <p>
+        📞 +91 80569 47184
+    </p>
+
+
+    <p>
+        📷 Instagram:priya_makeupartist_mua26
+    </p>
+
+
+    <p>
+        📍 Tamil Nadu, India
+    </p>
+
+
+    <div class="copyright">
+
+        © 2026 Priya Makeup Artist.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>

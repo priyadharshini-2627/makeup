@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priya makeup artist</title>
+    
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5f5;
+            color: #3b2028;
+        }
+          header {
+            background: white;
+            min-height: 90px;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 12px #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            color: #b52d59;
+            font-size: 38px;
+            font-family: cursive;
+            line-height: 1;
+        }
+
+
+        .logo small {
+            display: block;
+            font-family: Arial;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #b52d59;
+        }
+
+
+        .book-btn {
+            text-decoration: none;
+            color: white;
+            background: #b52d59;
+
+            padding: 13px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .book-btn:hover {
+            background: #8f2045;
+        }
+        /* BOOKING PAGE */
+
+.booking-page {
+    background: #fff7fa;
+    padding: 70px 8%;
+}
+
+.booking-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.booking-title h2 {
+    color: #a91f4d;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.booking-title p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+.booking-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+
+/* LEFT */
+
+.booking-info {
+    flex: 1;
+    background: #a91f4d;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    width: 45%;
+}
+
+.booking-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.booking-info > p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+.booking-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 22px 0;
+}
+
+.booking-feature span {
+    background: white;
+    color: #a91f4d;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.booking-feature h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.booking-feature p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* FORM */
+
+.booking-form {
+    flex: 1.2;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px #ddd;
+}
+
+.booking-form h3 {
+    color: #a91f4d;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.booking-form label {
+    display: block;
+    color: #555;
+    font-weight: bold;
+    margin: 13px 0 7px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #a91f4d;
+}
+
+
+.booking-form textarea {
+    resize: vertical;
+}
+
+
+.booking-form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: #a91f4d;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-form button:hover {
+    background: #64132f;
+    transform: translateY(-2px);
+}
+
+
+/* BOTTOM */
+
+.booking-bottom {
+    text-align: center;
+    background: #fff0f5;
+    padding: 55px 20px;
+}
+
+.booking-bottom h2 {
+    color: #a91f4d;
+    font-size: 32px;
+}
+
+.booking-bottom p {
+    color: #666;
+}
+
+.booking-contact {
+    color: #a91f4d !important;
+    font-weight: bold;
+}
+.success-box {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+    background: #fff0f5;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px #ddd;
+}
+
+.success-box h1 {
+    color: #a91f4d;
+}
+
+.success-box p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .booking-page {
+        padding: 50px 5%;
+    }
+
+    .booking-title h2 {
+        font-size: 30px;
+    }
+
+    .booking-container {
+        flex-direction: column;
+    }
+
+    .booking-info,
+    .booking-form {
+        padding: 28px;
+        margin: auto;
+    }
+
+}
+footer {
+    background: #64132f;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h3 {
+    font-size: 25px;
+}
+
+        </style>
+        </head>
+      
+
+
+
+        <body>
+            <header>
+
+
+   <div class="logo">
+
+        <img src="front\ChatGPT Image Sep 25, 2026, 12_23_36 PM.png">
+    </div>
+
+
+    <nav>
+
+        <a href="home.html"class="book-btn">HOME</a>
+
+        <a href="about.html"class="book-btn">ABOUT</a>
+
+        <a href="services.html"class="book-btn">SERVICES</a>
+
+       
+        <a href="packages.html"class="book-btn">PACKAGES</a>
+
+        <a href="gallery.html"class="book-btn">GALLERY</a>
+
+        <a href="booking.html"class="book-btn">BOOKING</a>
+
+        <a href="contact.html"class="book-btn">CONTACT</a>
+
+    </nav>
+
+
+    <a href="booking.html"
+       class="book-btn">
+
+        📅 Book Appointment
+
+    </a>
+
+
+
+
+</header>
+
+<section class="booking-page">
+
+    <div class="booking-title">
+        <h2>Book Your Beauty Experience ✨</h2>
+
+        <p>
+            Your special day deserves a look that feels beautiful,
+            confident and completely you. 💕
+        </p>
+    </div>
+
+
+    <div class="booking-container">
+
+        <!-- LEFT SIDE -->
+        <div class="booking-info">
+
+            <h3>Let's Create Your Perfect Look 💄</h3>
+
+            <p>
+                Tell me about your special occasion and I will help
+                you choose the perfect makeup and styling service.
+            </p>
+
+            <div class="booking-feature">
+                <span>👰</span>
+                <div>
+                    <h4>Bridal Makeup</h4>
+                    <p>Beautiful looks for your special day.</p>
+                </div>
+            </div>
+
+            <div class="booking-feature">
+                <span>💇</span>
+                <div>
+                    <h4>Hairstyling</h4>
+                    <p>Elegant hairstyles to complete your look.</p>
+                </div>
+            </div>
+
+            <div class="booking-feature">
+                <span>👗</span>
+                <div>
+                    <h4>Saree Draping</h4>
+                    <p>Neat and graceful saree styling.</p>
+                </div>
+            </div>
+
+            <div class="booking-feature">
+                <span>🌸</span>
+                <div>
+                    <h4>Mehendi</h4>
+                    <p>Beautiful mehendi designs for your occasion.</p>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+        <!-- RIGHT SIDE -->
+         <div class="booking-form">
+
+        <form id="booking-form">
+
+    <input type="text"
+           id="name"
+           placeholder="Full Name"
+           required>
+
+    <input type="tel"
+           id="phone"
+           placeholder="10-digit number" maxlength="10"
+           required>
+
+    
+
+    <select id="service" required>
+
+        <option value="">Select Service</option>
+
+        <option value="Bridal Makeup">
+            Bridal Makeup
+        </option>
+
+        <option value="Reception Makeup">
+            Reception Makeup
+        </option>
+
+        <option value="Engagement Makeup">
+            Engagement Makeup
+        </option>
+
+        <option value="Party Makeup">
+            Party Makeup
+        </option>
+
+        <option value="Saree Draping">
+            Saree Draping
+        </option>
+
+        <option value="Bridal Hairstyling">
+            Bridal Hairstyling
+        </option>
+
+    </select>
+
+
+    <select id="packageName">
+
+        <option value="">Select Package</option>
+
+        <option value="Wedding Bride">
+            Wedding Bride
+        </option>
+
+        <option value="Engagement Glow">
+            Engagement Glow
+        </option>
+
+        <option value="Reception Glam">
+            Reception Glam
+        </option>
+
+        <option value="Bridal Elegance">
+            Bridal Elegance
+        </option>
+
+        <option value="Royal Bride">
+            Royal Bride
+        </option>
+        <option value="Puberty">
+            Puberty
+
+        </option>
+
+    </select>
+
+
+    <input type="date"
+           id="date"
+           required>
+
+
+    <input type="text"
+           id="location"
+           placeholder="Event Location"
+           required>
+
+
+    <textarea id="message"
+              placeholder="Additional Details"></textarea>
+
+
+    <button type="submit">
+        💄 Send Booking Request
+    </button>
+
+</form>
+        
+
+<div id="bookingResult"></div>
+
+         </div>
+
+    </div>
+
+</section>
+
+
+<section class="booking-bottom">
+
+    <h2>Ready to Get Glam? ✨</h2>
+
+    <p>
+        Let's make your special occasion even more beautiful.
+    </p>
+
+    <p class="booking-contact">
+        💕 Thank you for choosing Priya Makeup Artist
+    </p>
+
+</section>
+
+
+<footer>
+
+    <h3>Priya Makeup Artist 💄</h3>
+
+    <p>
+        Bridal Makeup • Hairstyling • Saree Styling • Mehendi
+    </p>
+
+    <p>© 2026 Priya Makeup Artist</p>
+
+</footer>
+
+
+
+<script>
+    console.log("🟢 BOOKING SCRIPT STARTED");
+
+document.getElementById("booking-form").addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const bookingForm = document.getElementById("booking-form");
+    const bookingResult = document.getElementById("bookingResult");
+
+    // Get customer details
+    const bookingData = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        service: document.getElementById("service").value,
+        packageName: document.getElementById("packageName").value,
+        date: document.getElementById("date").value,
+        location: document.getElementById("location").value,
+        message: document.getElementById("message").value
+    };
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:3000/booking",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(bookingData)
+            }
+        );
+
+        const result = await response.json();
+
+
+        // DATE ALREADY BOOKED
+        if (response.status === 409) {
+
+            bookingResult.innerHTML =
+                "<div class='success-box'>" +
+                "<h2>❌ Date Not Available</h2>" +
+                "<p>" + result.message + "</p>" +
+                "</div>";
+
+            return;
+        }
+
+
+        // BOOKING SUCCESS
+        if (response.ok && result.success) {
+
+            // Hide booking form
+            bookingForm.style.display = "none";
+
+            // Show confirmation
+            bookingResult.innerHTML =
+                "<div class='success-box'>" +
+
+                "<h1>🎉 Booking Successfully Confirmed!</h1>" +
+
+                "<p>Thank you for choosing Priya Makeup Artist 💄💕</p>" +
+
+                "<p><b>Event Date:</b> " +
+                bookingData.date +
+                "</p>" +
+
+                "<p><b>Service:</b> " +
+                bookingData.service +
+                "</p>" +
+
+                "<p><b>Package:</b> " +
+                bookingData.packageName +
+                "</p>" +
+
+                "<p><b>Location:</b> " +
+                bookingData.location +
+                "</p>" +
+
+                "<p>We will contact you soon. ✨</p>" +
+
+                "</div>";
+
+            console.log("✅ Booking confirmation displayed.");
+
+            return;
+        }
+
+
+        // OTHER SERVER ERROR
+        bookingResult.innerHTML =
+            "<div class='success-box'>" +
+            "<h2>❌ Booking Failed</h2>" +
+            "<p>" + (result.message || "Please try again.") + "</p>" +
+            "</div>";
+
+    }
+
+
+    catch (error) {
+
+        console.error("❌ Booking error:", error);
+
+        bookingResult.innerHTML =
+            "<div class='success-box'>" +
+            "<h2>❌ Unable to connect to booking server</h2>" +
+            "<p>Please try again.</p>" +
+            "</div>";
+    }
+
+});
+
+</script>
+
+<!-- FIREBASE NOTIFICATION CODE -->
+
+<script type="module">
+    console.log("🟢 FIREBASE SCRIPT STARTED");
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+
+import {
+    getMessaging,
+    getToken,
+    onMessage
+}
+from "https://www.gstatic.com/firebasejs/12.19.0/firebase-messaging.js";
+
+
+// Firebase configuration
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDgn9jATpaucdEEBZ9HVvJ4a-GuJasKjjs",
+  authDomain: "priya-makeup-artist-796e2.firebaseapp.com",
+  projectId: "priya-makeup-artist-796e2",
+  storageBucket: "priya-makeup-artist-796e2.firebasestorage.app",
+  messagingSenderId: "831342321953",
+  appId: "1:831342321953:web:d6437b93fa233885ee5e60",
+  measurementId: "G-EDYY9PZJNS"
+};
+
+// Initialize Firebase
+
+const app = initializeApp(firebaseConfig);
+
+
+// Initialize Firebase Messaging
+
+const messaging = getMessaging(app);
+
+
+// Ask notification permission
+
+async function enableNotifications() {
+
+    try {
+
+        const permission = await Notification.requestPermission();
+
+        if (permission !== "granted") {
+
+            console.log("❌ Notification permission was not granted.");
+
+            return;
+        }
+
+
+        console.log("✅ Notification permission granted.");
+
+
+        // Get FCM registration token
+
+        const token = await getToken(messaging, {
+
+            vapidKey: "BLxM5NM-Tz4dyytvoXV2f5V4Vq2qa0aDXZ4UjnxEbO7BoddkAyHquhRdIwDAV6ivJf-OPDqFDcpk4KpimZHtzvA"
+
+        });
+
+
+        if (token) {
+
+            console.log("✅ FCM Token:");
+
+            console.log(token);
+
+            // Save token in browser
+
+            localStorage.setItem("fcmToken", token);
+                 console.log("✅ FCM token saved.");
+  
+
+            await fetch("http://localhost:3000/save-token", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        token: token
+    })
+});
+
+console.log("✅ FCM token sent to server.");
+
+
+        }
+
+        else {
+
+            console.log("❌ No FCM token received.");
+
+        }
+
+
+    }
+
+    catch (error) {
+
+        console.error("❌ Firebase notification error:");
+
+        console.error(error);
+
+    }
+
+}
+
+
+// Run notification setup
+
+enableNotifications();
+
+
+// Receive notification when website is open
+
+onMessage(messaging, (payload) => {
+
+    console.log("🔔 New notification received:");
+
+    console.log(payload);
+
+
+    if (payload.notification) {
+
+        alert(
+            "💄 " +
+            payload.notification.title +
+            "\n\n" +
+            payload.notification.body
+        );
+
+    }
+
+});
+
+</script>
+</body>
+</html>        

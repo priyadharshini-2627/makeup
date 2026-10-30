@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priya makeup artist</title>
+    
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5f5;
+            color: #3b2028;
+        }
+          header {
+            background: white;
+            min-height: 90px;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 12px #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            color: #b52d59;
+            font-size: 38px;
+            font-family: cursive;
+            line-height: 1;
+        }
+
+
+        .logo small {
+            display: block;
+            font-family: Arial;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #b52d59;
+        }
+
+
+        .book-btn {
+            text-decoration: none;
+            color: white;
+            background: #b52d59;
+
+            padding: 13px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .book-btn:hover {
+            background: #8f2045;
+        }
+        /* CONTACT PAGE */
+
+.contact-page {
+    background: #fff7fa;
+    padding: 70px 8%;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.contact-title h2 {
+    color: #a91f4d;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact-title p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* CONTAINER */
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+}
+
+
+/* CONTACT INFO */
+
+.contact-info {
+    flex: 1;
+    background: #a91f4d;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* CONTACT ITEMS */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 22px 0;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: white;
+    color: #a91f4d;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.contact-item h4 {
+    margin: 0 0 5px;
+    font-size: 17px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* SOCIAL */
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links h4 {
+    margin-bottom: 12px;
+}
+
+.social-btn {
+    display: inline-block;
+    background: white;
+    color: #a91f4d;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* FORM */
+
+.contact-form {
+    flex: 1.2;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px #ddd;
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: #a91f4d;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.contact-form label {
+    display: block;
+    color: #555;
+    font-weight: bold;
+    margin: 13px 0 7px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #a91f4d;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: #a91f4d;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #64132f;
+}
+
+
+/* BOTTOM */
+
+.contact-bottom {
+    text-align: center;
+    background: #fff0f5;
+    padding: 55px 20px;
+}
+
+.contact-bottom h2 {
+    color: #a91f4d;
+    font-size: 32px;
+}
+
+.contact-bottom p {
+    color: #666;
+    margin-bottom: 25px;
+}
+        
+        footer {
+    background: #64132f;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h3 {
+    font-size: 25px;
+}
+</style>
+</head>
+<body>
+    <header>
+
+
+   <div class="logo">
+
+        <img src="front\ChatGPT Image Sep 25, 2026, 12_23_36 PM.png">
+    </div>
+
+
+    <nav>
+
+        <a href="home.html"class="book-btn">HOME</a>
+
+        <a href="about.html"class="book-btn">ABOUT</a>
+
+        <a href="services.html"class="book-btn">SERVICES</a>
+
+       
+        <a href="packages.html"class="book-btn">PACKAGES</a>
+
+        <a href="gallery.html"class="book-btn">GALLERY</a>
+
+        <a href="booking.html"class="book-btn">BOOKING</a>
+
+        <a href="contact.html"class="book-btn">CONTACT</a>
+
+    </nav>
+
+
+    <a href="booking.html"
+       class="book-btn">
+
+        📅 Book Appointment
+
+    </a>
+
+
+
+</header>
+<section class="contact-page">
+
+    <div class="contact-title">
+        <h2>Let's Connect 💕</h2>
+
+        <p>
+            Have a question or planning your special day?
+            Feel free to get in touch with me.
+        </p>
+    </div>
+
+
+    <div class="contact-container">
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <h3>Get In Touch ✨</h3>
+
+            <p>
+                I would love to hear from you and help you
+                create your perfect look for your special occasion.
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">📞</div>
+
+                <div>
+                    <h4>Phone</h4>
+                    <p>+91 80569 47184</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">📧</div>
+
+                <div>
+                    <h4>Email</h4>
+                    <p>priyavijayakumar2627@gmail.com</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">📍</div>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>Kumbakonam, Tamil Nadu</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">🕒</div>
+
+                <div>
+                    <h4>Working Hours</h4>
+                    <p>9:00 AM – 8:00 PM</p>
+                </div>
+
+            </div>
+
+
+            <div class="social-links">
+
+                <h4>Follow Me</h4>
+
+                <a href="https://www.instagram.com/priya_makeupartist_mua26/" class="social-btn">📸 Instagram</a>
+
+                <a href="https://wa.me/918056947184?text=Hello%20Priya%20Makeup%20Artist,%20I%20would%20like%20to%20know%20about%20your%20packages." class="social-btn">💬 WhatsApp</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+            <h3>Send Me a Message 💌</h3>
+
+            <form>
+
+                <label>Your Name</label>
+
+                <input
+                    type="text"
+                    class="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Phone Number</label>
+
+                <input
+                    type="tel"
+                    class="phone"
+                    placeholder="10-digit number" maxlength="10"
+                    required
+                >
+
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    class="email"
+                    placeholder="Enter your email"
+                >
+
+
+                <label>Your Message</label>
+
+                <textarea
+                    class="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                ></textarea>
+
+
+                <button type="submit">
+                   💌 Send Message
+                </button>
+
+            </form>
+           
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact-bottom">
+
+    <h2>Your Special Day Starts Here ✨</h2>
+
+    <p>
+        Let's discuss your requirements and create a beautiful look
+        for your memorable occasion.
+    </p>
+
+    <a href="booking.html" class="button">
+        Book Your Appointment 💄
+    </a>
+
+</section>
+
+
+<footer>
+
+    <h3>Priya Makeup Artist 💄</h3>
+
+    <p>
+        Bridal Makeup • Hairstyling • Saree Styling • Mehendi
+    </p>
+
+    <p>© 2026 Priya Makeup Artist</p>
+
+</footer>
+ <script>
+document.querySelector(".contact-form form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = this.querySelector(".name").value;
+    const phone = this.querySelector(".phone").value;
+    const email = this.querySelector(".email").value;
+    const message = this.querySelector(".message").value;
+
+    const whatsappNumber = "918056947184";
+
+    const whatsappMessage =
+        "💄 New Website Enquiry\n\n" +
+        "👤 Name: " + name + "\n" +
+        "📱 Phone: " + phone + "\n" +
+        "📧 Email: " + email + "\n" +
+        "💬 Message: " + message;
+
+    const whatsappURL =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(whatsappMessage);
+
+    window.location.href = whatsappURL;
+});
+</script>
+</body>
+</html>

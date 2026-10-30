@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5f5;
+            color: #3b2028;
+        }
+          header {
+            background: white;
+            min-height: 90px;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 12px #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            color: #b52d59;
+            font-size: 38px;
+            font-family: cursive;
+            line-height: 1;
+        }
+
+
+        .logo small {
+            display: block;
+            font-family: Arial;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #b52d59;
+        }
+
+
+        .book-btn {
+            text-decoration: none;
+            color: white;
+            background: #b52d59;
+
+            padding: 13px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .book-btn:hover {
+            background: #8f2045;
+        }
+        
+        /* Home */
+        .home {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            padding: 50px 5%;
+            background: linear-gradient(
+                to right,
+                #fff0f2,
+                #f9dfe4
+            );
+        }
+
+        .content {
+            width: 97%;
+            padding: 30px;
+        }
+
+        .content h3 {
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .content h1 {
+            font-size: 55px;
+            margin: 20px 0;
+        }
+
+        .content h1 span {
+            color: #c52f5b;
+            font-family: cursive;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #c52f5b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-size: 25px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* Image */
+        .image {
+            width: 50%;
+            height: 60%;
+            text-align: center;
+            float: right;
+        }
+
+        .image img {
+            width: 90%;
+            height: 740px;
+            object-fit: contain;
+            border-radius: 20px;
+        }
+
+        /* Buttons */
+        .buttons a {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .primary {
+            background: #c52f5b;
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #c52f5b;
+            color: #c52f5b;
+        }
+
+        /* Statistics */
+        .stats {
+            background: #a91f4d;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stats h2 {
+            font-size: 28px;
+        }
+
+        .stats p {
+            margin-top: 5px;
+        }
+
+        /* Mobile */
+        @media(max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .home {
+                flex-direction: column;
+            }
+
+            .content,
+            .image {
+                width: 100%;
+            }
+
+            .content h1 {
+                font-size: 40px;
+            }
+
+            .features {
+                flex-wrap: wrap;
+            }
+
+            .stats {
+                flex-wrap: wrap;
+                gap: 25px;
+            }
+        }
+.gallery-page {
+    background: #fff7fa;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.gallery-page h2 {
+    color: #a91f4d;
+    font-size: 38px;
+}
+
+.gallery-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.gallery-card {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #ddd;
+    transition: 0.4s;
+    height: 70%;
+    padding: 5px;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 15px 35px #ccc;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    transition: 0.4s;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-card h3 {
+    color: #a91f4d;
+    padding: 15px;
+    margin: 0;
+}
+
+.gallery-bottom {
+    text-align: center;
+    background: #fff0f5;
+    padding: 60px 20px;
+}
+
+.gallery-bottom h2 {
+    color: #a91f4d;
+}
+
+.gallery-bottom p {
+    margin-bottom: 25px;
+}
+footer {
+    background: #64132f;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h3 {
+    font-size: 25px;
+}
+
+    </style>
+</head>
+
+    <body>
+
+<header>
+
+
+    <div class="logo">
+
+        <img src="front\ChatGPT Image Sep 25, 2026, 12_23_36 PM.png">
+    </div>
+
+
+    <nav>
+
+        <a href="home.html"class="book-btn">HOME</a>
+
+        <a href="about.html"class="book-btn">ABOUT</a>
+
+        <a href="services.html"class="book-btn">SERVICES</a>
+
+       
+        <a href="packages.html"class="book-btn">PACKAGES</a>
+
+        <a href="gallery.html"class="book-btn">GALLERY</a>
+
+        <a href="booking.html"class="book-btn">BOOKING</a>
+
+        <a href="contact.html"class="book-btn">CONTACT</a>
+
+    </nav>
+
+
+    <a href="booking.html"
+       class="book-btn">
+
+        📅 Book Appointment
+
+    </a>
+
+
+
+
+</header>
+
+<section class="gallery-page">
+
+    <h2>Our Beautiful Gallery ✨</h2>
+
+    <p class="gallery-intro">
+        A collection of beautiful bridal looks, elegant hairstyles
+        and special moments created with love and care.
+    </p>
+
+
+    <div class="gallery-container">
+
+        <div class="gallery-card">
+            <img src="front\bridal glow\36153cd8a858be2611dea4d552e14a17.jpg" alt="Bridal Makeup">
+            <h3>Bridal Glow 👰</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="front\bridal glow\1785b96c180124d8c5a08f20641f4039.jpg" alt="Traditional Bridal Look">
+            <h3>Traditional Bride 🌸</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="front\4a891e1fcf49af216bd60396ce880bc1.jpg" alt="Reception Makeup">
+            <h3>Reception Glam ✨</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="front\98b2db8e707c90f166a01c34d34f45e7.jpg" alt="Engagement Makeup">
+            <h3>Engagement Look 💍</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="front\hairstyle\560b69dacd823703291f637bd9bc2629.jpg" alt="Bridal Hairstyle">
+            <h3>Bridal Hairstyle 💇</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="front\c7fd891cbe9801bf8e1016216ba7d34b.jpg" alt="Saree Draping">
+            <h3>Elegant Saree Draping 👗</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://i.pinimg.com/736x/9d/34/3a/9d343a16b64cff219bd51613a7d81dfc.jpg" alt="Mehendi">
+            <h3>Mehendi Art 🌿</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://i.pinimg.com/736x/27/e1/a9/27e1a947ba6b3dee8ca8121647399f7c.jpg" alt="Party Makeup">
+            <h3>Party Glam 💄</h3>
+        </div>
+
+        
+
+    </div>
+
+</section>
+
+
+<section class="gallery-bottom">
+
+    <h2>Love What You See? 💕</h2>
+
+    <p>
+        Let's create a beautiful look for your special day.
+    </p>
+
+    <a href="booking.html" class="button">
+        Book Your Appointment
+    </a>
+
+</section>
+
+
+<footer>
+    <h3>Priya Makeup Artist</h3>
+    <p>Bridal Makeup • Hairstyling • Saree Styling</p>
+    <p>© 2026 Priya Makeup Artist</p>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
