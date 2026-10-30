@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priya makeup artist</title>
+    
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5f5;
+            color: #3b2028;
+        }
+          header {
+            background: white;
+            min-height: 90px;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 12px #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            color: #b52d59;
+            font-size: 38px;
+            font-family: cursive;
+            line-height: 1;
+        }
+
+
+        .logo small {
+            display: block;
+            font-family: Arial;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #b52d59;
+        }
+
+
+        .book-btn {
+            text-decoration: none;
+            color: white;
+            background: #b52d59;
+
+            padding: 13px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .book-btn:hover {
+            background: #8f2045;
+        }
+        
+        /* Home */
+        .home {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            padding: 50px 5%;
+            background: linear-gradient(
+                to right,
+                #fff0f2,
+                #f9dfe4
+            );
+        }
+
+        .content {
+            width: 97%;
+            padding: 30px;
+        }
+
+        .content h3 {
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .content h1 {
+            font-size: 55px;
+            margin: 20px 0;
+        }
+
+        .content h1 span {
+            color: #c52f5b;
+            font-family: cursive;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #c52f5b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-size: 25px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* Image */
+        .image {
+            width: 50%;
+            text-align: center;
+            float: right;
+        }
+
+        .image img {
+            width: 90%;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* Buttons */
+        .buttons a {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .primary {
+            background: #c52f5b;
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #c52f5b;
+            color: #c52f5b;
+        }
+
+        /* Statistics */
+        .stats {
+            background: #a91f4d;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stats h2 {
+            font-size: 28px;
+        }
+
+        .stats p {
+            margin-top: 5px;
+        }
+
+        /* Mobile */
+        @media(max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .home {
+                flex-direction: column;
+            }
+
+            .content,
+            .image {
+                width: 100%;
+            }
+
+            .content h1 {
+                font-size: 40px;
+            }
+
+            .features {
+                flex-wrap: wrap;
+            }
+
+            .stats {
+                flex-wrap: wrap;
+                gap: 25px;
+            }
+        }
+</style>
+</head>
+<body>
+    <header>
+
+
+   
+<div class="logo">
+
+        <img src="front\ChatGPT Image Sep 25, 2026, 12_23_36 PM.png">
+    </div>
+
+
+    <nav>
+
+        <a href="home.html"class="book-btn">HOME</a>
+
+        <a href="about.html"class="book-btn">ABOUT</a>
+
+        <a href="services.html"class="book-btn">SERVICES</a>
+
+       
+        <a href="packages.html"class="book-btn">PACKAGES</a>
+
+        <a href="gallery.html"class="book-btn">GALLERY</a>
+
+        <a href="booking.html"class="book-btn">BOOKING</a>
+
+        <a href="contact.html"class="book-btn">CONTACT</a>
+
+    </nav>
+
+
+    <a href="booking.html"
+       class="book-btn">
+
+        📅 Book Appointment
+
+    </a>
+
+
+</header>
+
+    
+
+
+<section class="home">
+
+    <div class="content">
+         <!-- Bridal Image -->
+    <div class="image">
+
+        <img src="front\OIP (2).webp" alt="Bridal Makeup">
+
+    </div>
+
+       
+
+        <h3>Let Your Beauty Shine ✨</h3>
+
+        <h1>
+            Elegance <span>Refined</span>,<br>
+            Beauty <span>Redefined</span> ♡
+        </h1>
+
+        <p>
+            We create looks that enhance your natural beauty
+            and make every moment of yours unforgettable.
+        </p>
+
+
+        <!-- Features -->
+        <div class="features">
+
+            <div class="feature">
+                <div class="circle">💄</div>
+                <p>Premium<br>Products</p>
+            </div>
+
+            <div class="feature">
+                <div class="circle">👰</div>
+                <p>Personalized<br>Looks</p>
+            </div>
+
+            <div class="feature">
+                <div class="circle">⏰</div>
+                <p>On-Time<br>Service</p>
+            </div>
+
+            <div class="feature">
+                <div class="circle">🛡️</div>
+                <p>Hygienic &<br>Safe</p>
+            </div>
+
+        </div>
+         
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <a href="booking.html" class="primary">
+                Book Your Glam Session →
+            </a>
+
+            <a href="gallery.html" class="secondary">
+                ▶ Watch Our Work
+            </a>
+
+        </div>
+           
+
+    </div>
+
+</section>
+
+
+<!-- Statistics -->
+<section class="stats">
+
+    <div>
+        <h2>250+</h2>
+        <p>Happy Clients</p>
+    </div>
+
+    <div>
+        <h2>300+</h2>
+        <p>Makeup Looks</p>
+    </div>
+
+    <div>
+        <h2>5+</h2>
+        <p>Years Experience</p>
+    </div>
+
+    <div>
+        <h2>100%</h2>
+        <p>Client Satisfaction</p>
+    </div>
+
+</section>
+
+</body>
+</html>

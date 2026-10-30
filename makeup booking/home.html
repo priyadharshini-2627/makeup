@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5f5;
+            color: #3b2028;
+        }
+
+          header {
+            background: white;
+            min-height: 70px;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 2px 12px #ddd;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .logo {
+            color: #b52d59;
+            font-size: 38px;
+            font-family: cursive;
+            
+        }
+
+
+        .logo small {
+            display: block;
+            font-family: Arial;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: #b52d59;
+        }
+
+
+/* Hero */
+
+.hero {
+    height: 550px;
+
+    background-image:
+        linear-gradient(
+            rgba(80, 20, 40, 0.45),
+            rgba(80, 20, 40, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.hero-text {
+    color: white;
+    max-width: 550px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+}
+
+.button {
+    display: inline-block;
+    background: #a91f4d;
+    color: white;
+    padding: 14px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+
+/* Sections */
+
+section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #a91f4d;
+    font-size: 35px;
+}
+
+
+/* Welcome */
+
+.welcome p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+/* Photos */
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.photo-card {
+    width: 300px;
+    background: white;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #ddd;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.photo-card h3 {
+    color: #a91f4d;
+}
+
+
+/* Services */
+
+.services {
+    background: #fff0f5;
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box div {
+    background: white;
+    width: 210px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.service-box h3 {
+    color: #a91f4d;
+}
+
+
+/* Experience */
+
+.experience {
+    background: #a91f4d;
+    color: white;
+}
+
+.experience h2 {
+    color: white;
+}
+
+.experience p {
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+
+/* Gallery */
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 230px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* CTA */
+
+.cta {
+    background: #fff0f5;
+}
+
+
+/* Footer */
+
+footer {
+    background: #64132f;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h3 {
+    font-size: 25px;
+}
+
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff7fa;
+    color: #333;
+    }
+
+/* Header */
+
+header {
+    background: white;
+
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #a91f4d;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #a91f4d;
+}
+ .book-btn {
+            text-decoration: none;
+            color: white;
+            background: #b52d59;
+
+            padding: 13px 22px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .book-btn:hover {
+            background: #8f2045;
+        }
+
+/* Hero */
+
+.hero {
+    height: 550px;
+    width: 1550px;
+    background-image:
+        linear-gradient(
+            rgba(80, 20, 40, 0.45),
+            rgba(80, 20, 40, 0.45)
+         ),url("front\\New folder\\first.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding-left: 62%;
+}
+
+.hero-text {
+    color: white;
+    max-width: 550px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+}
+
+.button {
+    display: inline-block;
+    background: #a91f4d;
+    color: white;
+    padding: 14px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+
+/* Sections */
+
+section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #a91f4d;
+    font-size: 35px;
+}
+
+
+/* Welcome */
+
+.welcome p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+/* Photos */
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+
+
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.photo-card {
+    width: 300px;
+    background: white;
+    padding-bottom: 20px;
+    border-radius: 15 px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px #ddd;
+}
+.photo-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px #ccc;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 330px;
+    transition: 0.3s;
+  
+
+}
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+.photo-card h3 {
+    color: #a91f4d;
+}
+
+
+/* Services */
+
+.services {
+    background: #fff0f5;
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-box div {
+    background: white;
+    width: 210px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.service-box h3 {
+    color: #a91f4d;
+}
+
+
+/* Experience */
+
+.experience {
+    background: #a91f4d;
+    color: white;
+}
+
+.experience h2 {
+    color: white;
+}
+
+.experience p {
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+
+/* Gallery */
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 230px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* CTA */
+
+.cta {
+    background: #fff0f5;
+}
+
+
+/* Footer */
+
+footer {
+    background: #64132f;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h3 {
+    font-size: 25px;
+}
+
+   </style>
+
+<body>
+
+    <!-- Navigation -->
+
+   <header>
+ <div class="logo">
+
+        <img src="front\ChatGPT Image Sep 25, 2026, 12_23_36 PM.png">
+    </div>
+
+
+    <nav>
+
+        <a href="home.html"class="book-btn">HOME</a>
+
+        <a href="about.html"class="book-btn">ABOUT</a>
+
+        <a href="services.html"class="book-btn">SERVICES</a>
+
+       
+        <a href="packages.html"class="book-btn">PACKAGES</a>
+
+        <a href="gallery.html"class="book-btn">GALLERY</a>
+
+        <a href="booking.html"class="book-btn">BOOKING</a>
+
+        <a href="contact.html"class="book-btn">CONTACT</a>
+
+    </nav>
+
+
+    <a href="booking.html"
+       class="book-btn">
+
+        📅 Book Appointment
+
+    </a>
+
+
+
+</header>
+
+
+    <!-- Main Hero -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p>BRIDAL • BEAUTY • ELEGANCE</p>
+
+            <h2>Your Special Day,<br>
+                Your Beautiful Look ✨</h2>
+
+            <p>
+                Makeup looks thoughtfully created to make
+                your special moments even more beautiful.
+            </p>
+
+            <a href="booking.html" class="button">
+                Book Your Appointment
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Welcome -->
+
+    <section class="welcome">
+
+        <h2>Beauty That Feels Like You 🌸</h2>
+
+        <p>
+            From elegant bridal looks to beautiful celebration
+            makeup, discover a style created especially for you.
+        </p>
+
+    </section>
+
+
+    <!-- Featured Looks -->
+
+    <section class="looks">
+
+        <h2>Explore Our Looks</h2>
+
+        <div class="photo-container">
+
+            <div class="photo-card">
+
+                <img src="front\Monochromatic-Bridal-Makeup-South-Indian-Wedding.jpeg"
+                     alt="Bridal Makeup">
+
+                <h3>Bridal Beauty 👰</h3>
+
+                <p>
+                    Elegant looks for your unforgettable day.
+                </p>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="front\OIP (3).webp"
+                     alt="Makeup Look">
+
+                <h3>Signature Makeup 💄</h3>
+
+                <p>
+                    Beautifully styled looks for every occasion.
+                </p>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="front\9XabZ-MlEUvMzmhxevwtHLpQ3Tb7yCvqimjT0uenC6mviPvulMjGra1izN_FTo2btebjkKHHEP4GumVhdp4zWGWqoPT9GqJUnuZjfdTM-Ojq9UZ-ActnBIKKS_eZ8zG71z09JZSysbsRTB_PJWA2S8xB0UJsIOvjvckY1gA0pNxyupj1srmTM_gupTqa5rxl.jpg"
+                     alt="Beauty Makeup">
+
+                <h3>Glamour & Glow ✨</h3>
+
+                <p>
+                    A polished look that reflects your style.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services Preview -->
+
+    <section class="services">
+
+        <h2>What We Create</h2>
+
+        <div class="service-box">
+
+            <div>
+                <h3>💄 Bridal Makeup</h3>
+                <p>Make your wedding day look unforgettable.</p>
+            </div>
+
+            <div>
+                <h3>✨ Reception Makeup</h3>
+                <p>Elegant looks designed for your celebration.</p>
+            </div>
+
+            <div>
+                <h3>💍 Engagement Makeup</h3>
+                <p>A beautiful look for your special beginning.</p>
+            </div>
+
+            <div>
+                <h3>👗 Saree Styling</h3>
+                <p>Saree draping and pre-pleating for a complete look.</p>
+            </div>
+
+        </div>
+
+        <a href="services.html" class="button">
+            View All Services
+        </a>
+
+    </section>
+
+
+    <!-- Customer Attraction -->
+
+    <section class="experience">
+
+        <div>
+
+            <h2>More Than Makeup ✨</h2>
+
+            <p>
+                Your beauty experience begins with understanding
+                your style, your occasion and the look you imagine.
+            </p>
+
+            <p>
+                Every detail is brought together — from makeup
+                and hairstyling to saree styling.
+            </p>
+
+            <a href="booking.html" class="button">
+                Create Your Look
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gallery Preview -->
+
+    <section class="gallery">
+
+        <h2>Moments We Love 📸</h2>
+
+        <div class="gallery-images">
+
+            <img src="front\makeup1.jpg"
+                 alt="Makeup">
+
+            <img src="front\lipstick.jpg"
+                 alt="Bridal Look">
+
+            <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=600&q=80"
+                 alt="Beauty">
+
+            <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=600&q=80"
+                 alt="Makeup Artist">
+
+        </div>
+
+    </section>
+
+
+    <!-- Final CTA -->
+
+    <section class="cta">
+
+        <h2>Ready for Your Beautiful Moment? 💕</h2>
+
+        <p>
+            Let's create a look you'll love to remember.
+        </p>
+
+        <a href="booking.html" class="button">
+            Book Your Glam Session
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>Priya Makeup Artist</h3>
+
+        <p>Bridal Makeup • Hairstyling • Saree Styling</p>
+
+        <p>Follow us on Instagram 📸</p>
+
+        <p>© 2026 Priya Makeup Artist</p>
+
+    </footer>
+
+</body>
+
+</html>
+```
+    
+</body>
+</html>
