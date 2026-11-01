@@ -7,22 +7,148 @@
     
 
     <style>
-        @media (max-width: 768px) {
-    body {
-        width: 100%;
-        overflow-x: hidden;
+       ```css
+/* TABLET VIEW */
+@media screen and (max-width: 900px) {
+
+    header h1 {
+        font-size: 26px;
     }
 
-    .container {
-        width: 95%;
+    nav a {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .hero-text h2 {
+        font-size: 36px;
+    }
+
+    .photo-container,
+    .services-container,
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+}
+
+
+/* MOBILE VIEW */
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px;
+        margin: 3px;
+    }
+
+    section {
+        padding: 35px 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 400px;
+        padding: 50px 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .photo-container,
+    .services-container,
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card,
+    .service-card,
+    .gallery-card {
+        width: 100%;
+        max-width: 350px;
         margin: auto;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    .photo-card img,
+    .service-card img,
+    .gallery-card img {
+        height: 300px;
     }
+
+    .package-card {
+        flex: 0 0 85%;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .slides img {
+        height: 280px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 25px 12px;
+    }
+
 }
+
+
+/* SMALL MOBILE VIEW */
+@media screen and (max-width: 380px) {
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+}
+
         *{
             margin: 0;
             padding: 0;
