@@ -710,7 +710,7 @@ document.getElementById("booking-form").addEventListener("submit", async functio
     try {
 
         const response = await fetch(
-            "http://localhost:3000/booking",
+           "https://priya-makeup-backend.onrender.com/booking",
             {
                 method: "POST",
                 headers: {
@@ -880,7 +880,7 @@ async function enableNotifications() {
                  console.log("✅ FCM token saved.");
   
 
-            await fetch("http://localhost:3000/save-token", {
+            await fetch("https://priya-makeup-backend.onrender.com/save-token", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
