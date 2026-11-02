@@ -15,7 +15,7 @@ initializeApp({
 
 const messaging = getMessaging();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const bookingFile = "bookings.json";
 const tokenFile = "tokens.json";
